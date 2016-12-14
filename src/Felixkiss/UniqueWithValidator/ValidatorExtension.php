@@ -133,10 +133,10 @@ class ValidatorExtension extends Validator
 
         // An ignore_id is only specified if the last param starts with a
         // number greater than 1 (a valid id in the database)
-        if (!preg_match('/^[1-9][0-9]*$/', $lastParam[0]))
-        {
-            return array(null, null);
-        }
+        // if (!preg_match('/^[1-9][0-9]*$/', $lastParam[0]))
+        // {
+        //    return array(null, null);
+        // }
 
         $ignoreId = $lastParam[0];
         $ignoreColumn = (sizeof($lastParam) > 1) ? end($lastParam) : null;
